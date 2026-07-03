@@ -1,6 +1,6 @@
 def menu():
    print("==== BANK ACCOUNT =====")
-   print("1. Check Balance")
+   print("1. Account Summary")
    print("2. Deposit Money")
    print("3. Withdraw Money")
    print("4. Exit")
@@ -26,6 +26,7 @@ while True:
             balance += amount
             transaction_count += 1
             print(f'Your new balance is : {balance}')
+            print(f" Transactions: {transaction_count}")
          else:
             print("Enter a positive amount!")
          amount1= input("Want to deposit more?[y/n]:")
@@ -45,6 +46,7 @@ while True:
             balance -= amount2
             transaction_count += 1
             print(f'Your new balance is : {balance}')
+            print(f" Transactions: {transaction_count}")
             amount3= input("Want to withdraw more?[y/n]:")
          if amount3 == "y" :
             continue
