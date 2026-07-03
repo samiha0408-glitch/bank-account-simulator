@@ -1,13 +1,12 @@
 def menu():
    print("==== BANK ACCOUNT =====")
-   print(" 1. Check Balance")
+   print("1. Check Balance")
    print("2. Deposit Money")
    print("3. Withdraw Money")
-   print ("4. Exit")
+   print("4. Exit")
 
 def pause():
    input("Press Enter to return to the menu...")
-   
 
 balance = 1000
 
