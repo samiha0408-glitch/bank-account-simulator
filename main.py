@@ -9,12 +9,13 @@ def pause():
    input("Press Enter to return to the menu...")
 
 balance = 1000
-
+transaction_count = 0
 while True:
    menu()
    choice = int(input("Enter your choice: "))
    if choice == 1:
       print(f" Your balance is: ${balance}")
+      print(f" Transactions: {transaction_count}")
       pause()
 
    elif choice == 2:
@@ -23,6 +24,7 @@ while True:
          amount = float(input("Enter the amount you want to deposit: "))
          if amount > 0:
             balance += amount
+            transaction_count += 1
             print(f'Your new balance is : {balance}')
          else:
             print("Enter a positive amount!")
@@ -41,6 +43,7 @@ while True:
             print("Insufficient Balance!!")
          else:
             balance -= amount2
+            transaction_count += 1
             print(f'Your new balance is : {balance}')
             amount3= input("Want to withdraw more?[y/n]:")
          if amount3 == "y" :
